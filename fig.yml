@@ -1,0 +1,10 @@
+web: 
+  build: .
+  #environment:
+  #  - MAVEN_OPTS="-javaagent:springloaded-1.2.1.jar -noverify"
+  ports: 
+    - "8080:8080"
+  volumes: 
+    - docker-rest:/data/spring-rest
+  command: mvn spring-boot:run
+
